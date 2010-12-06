@@ -1,6 +1,10 @@
 from flask import Flask, request
 app = Flask(__name__)
 
+@app.route("/")
+def root():
+    return "It works!"
+
 @app.route("/pass")
 def proxy_pass():
     import urllib
