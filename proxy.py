@@ -3,8 +3,8 @@ app = Flask(__name__)
 
 @app.route("/pass")
 def proxy_pass():
-    import custom_parser
     import urllib
+    import custom_parser
     url_string = request.args.get("url")
     try:
         url_sock = urllib.urlopen(url_string)
