@@ -16,10 +16,9 @@ app = Flask(__name__)
 @app.route("/pass")
 def proxy_pass():
     try:
-        text = urllib.urlopen(request.args.get("url")).read()
+        return urllib.urlopen(request.args.get("url")).read()
     except:
         return "Please include a valid URL parameter" 
-    return text
 
 if __name__ == "__main__":
     app.run(debug=True)
