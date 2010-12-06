@@ -1,5 +1,5 @@
-#! /usr/bin/env python 
+#! /usr/local/bin/python 
 from wsgiref.handlers import CGIHandler
-from server import app
+from proxy import app
 
 CGIHandler().run(app)
