@@ -15,7 +15,7 @@ def proxy_pass():
         text = url_sock.read()
         url_sock.close()
     except:
-        return "Please include a valid URL parameter" 
+        return "Please include a valid URL parameter"
     return custom_parser.fix_resources(text, url_string)
 
 if __name__ == "__main__":
