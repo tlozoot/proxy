@@ -8,7 +8,6 @@ def root():
     url_string = request.url.split("url=")[1] # Hackish; but works if the requested URL contains query params
     try:
         url_sock = urllib.urlopen(url_string)
-        print url_string
         content_type = url_sock.info()['Content-Type']
         proxied_html = custom_parser.fix_resources(url_sock.read(), url_string)
         resp = make_response(proxied_html)
