@@ -3,10 +3,6 @@ app = Flask(__name__)
 
 @app.route("/")
 def root():
-    return "It works!"
-
-@app.route("/pass")
-def proxy_pass():
     import urllib
     import custom_parser
     url_string = request.args.get("url")
